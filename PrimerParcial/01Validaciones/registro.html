@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" href="./CSS/style.css">
   <meta charset="UTF-8">
   <title>Registrar Asistencia - CECyT 9</title>
 </head>
 <body>
-
+  <header>
+    <a href="./detalle.html">Volver al Taller</a>
+  </header>
+  <main>
+    <form action="" class="formulario-registro">
+      <h1>Registrar asistencia</h1>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="boleta">Número de boleta: </label>
+      <input type="text" id="boleta" name="boleta" required>
+      <button type="submit">Registar</button>
+    </form>
+  </main>
 </body>
 </html>
