@@ -27,5 +27,30 @@ function validarCampo(campo, valor){
 //Para validar el formulario dbemos utilizar los principioa de obtencion y manipulacion de los elementos del DOM
 
 if(typeof document !== 'undefined'){
-    
+    const formulario = document.getElementById('form-registro');
+
+    formulario.addEventListener('submit', (evento) => {
+        evento.preventDefault();
+
+        let formularioValido = true;
+
+        for(const campo of Object.keys(patrones)){
+            const input = document.getElementById(campo);
+
+            const errorSpan = document.getElementById('error-${campo}');
+
+            const esValido = validarCampo(campo, input.value);
+
+            input.classList.toggle('invalido', !esValido);
+
+            spanError.textContent = esValido ? ' ' : mensajes[campo];
+
+            if(!esValido) formularioValido = false;
+
+        }
+
+         const mensajeExitoso = document.getElementById('mensaje-exito');
+         mensajeExitoso.textContent = formularioValido ? 'Registro exitoso!!!' : ' ';
+         
+    });
 }
