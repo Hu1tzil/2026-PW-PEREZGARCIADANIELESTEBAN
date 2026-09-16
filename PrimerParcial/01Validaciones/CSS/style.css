@@ -57,3 +57,71 @@ footer{
 .tarjeta a:hover{
     text-decoration: underline;
 }
+
+.formulario-registro{
+    max-width: 500px;
+    margin: 2 rem auto;
+    background-color: #FFFFFF;
+    border: 2px solid #AD7BA4;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(47, 10, 40, 0.2);
+}
+
+.formulario-registro input{
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #7BAD83;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.formulario-registro input:focus{
+    border-color: #2F0A28;
+    background-color: #f3f4f6;
+    outline: none;
+}
+
+.formulario-registro input:invalid{
+    border-color: #dc2626;
+    background-color: #FEE2E2;
+}
+
+.error{
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.formulario-registro button{
+    width: 100%;
+    background-color: #2F0A28;
+    color: #FFFFFF;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.formulario-registro button:hover{
+    background-color: #AD7BA4;
+}
+
+.mensaje-exito{
+    color: #0A2E0F; 
+    background-color: #D1FAE5;
+    border: 1px solid #7BAD83;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: center;
+    display: none;
+}
+
+.mensaje-exito.visible{
+    display: block;
+}
