@@ -13,15 +13,8 @@ header{
     background-color: #1f2937;
     color: #FFFFFF;
     padding: 1rem;
-}
-
-header h1 p{
-   text-align: center;
-}
-
-header a{
-    text-align: left;
-    text-decoration: none;
+    justify-content: space-between;
+    text-align: center;
 }
 
 main{
