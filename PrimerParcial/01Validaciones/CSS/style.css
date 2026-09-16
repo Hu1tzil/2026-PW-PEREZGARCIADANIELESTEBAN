@@ -65,6 +65,7 @@ footer{
 .formulario-registro{
     max-width: 500px;
     margin: 2 rem auto;
+    padding: 2 rem;
     background-color: #FFFFFF;
     border: 2px solid #AD7BA4;
     border-radius: 0.5rem;
