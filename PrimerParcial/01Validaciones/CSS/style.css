@@ -16,6 +16,11 @@ header{
     text-align: center;
 }
 
+header a{
+    text-align: left;
+    text-decoration: none;
+}
+
 main{
     max-width: 960px;
     margin: 0 auto;
@@ -93,6 +98,11 @@ footer{
     margin-top: -0.5rem;
     margin-bottom: 0.75rem;
     display: block;
+}
+
+.invalido{
+    border-color: #dc2626;
+    background-color: #FEE2E2;
 }
 
 .formulario-registro button{
