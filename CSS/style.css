@@ -1,38 +1,66 @@
-body{
-    background-color: #2F0A28;
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    color: #FFFFFF;
+*{
+    box-sizing: border-box;
 }
 
-table, th, td{
-    background-color: #AD7BA4;
-    border: 1px solid #FFFFFF;
-    padding: 0.5rem;
-    text-align: left;
+body{
+    background-color: #f9fafb;
+    font-family: 'Times New Roman', Times, serif;
+    color: #212E0A;
+    line-height: 1.6;
 }
 
 .conteiner{
     max-width: 960px;
-    margin: 0 auto;
-    padding: 1.5rem;
+    margin: 2 rem auto;
+    padding: 1rem;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+.titulocontent h1{
+    color: #2F0A28;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 
-.titulocontent{
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
+titulocontent p{
+    color: #0A2E0F;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.tables{
+.tables table{
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    Background-color: #E0F2E9;
+    border: 1px solid #AD7BA4;
+    border-radius: 0.5 rem;
+    overflow: hidden;
+}
+
+.tables th{
+    background-color: #2F0A28;
+    color: #FFFFFF;
+    padding: 0.75rem;
+    text-align: left;
+    text-align: center;
+
+}
+
+tables td{
+    padding: 0.75rem;
+    border-bottom: 1px solid #AD7BA4;
+    text-align: center;
+}
+
+a{
+    color: #7BAD83;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #AD7BA4;
+    text-decoration: underline;
 }
