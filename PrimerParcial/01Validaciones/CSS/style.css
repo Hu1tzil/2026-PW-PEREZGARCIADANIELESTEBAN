@@ -15,6 +15,10 @@ header{
     padding: 1rem;
 }
 
+header h1 p{
+   text-align: center;
+}
+
 header a{
     text-align: left;
     text-decoration: none;
@@ -64,8 +68,8 @@ footer{
 
 .formulario-registro{
     max-width: 500px;
-    margin: 2 rem auto;
-    padding: 2 rem;
+    margin: 3rem auto;
+    padding: 2rem;
     background-color: #FFFFFF;
     border: 2px solid #AD7BA4;
     border-radius: 0.5rem;
