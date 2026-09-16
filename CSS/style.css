@@ -6,6 +6,7 @@ body{
 }
 
 table, th, td{
+    background-color: #AD7BA4;
     border: 1px solid #FFFFFF;
     padding: 0.5rem;
     text-align: left;
@@ -26,7 +27,7 @@ table, th, td{
 }
 
 .titulocontent{
-    font-size: 2rem;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
 }
 
