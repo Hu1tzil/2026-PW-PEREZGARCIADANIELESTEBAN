@@ -41,13 +41,13 @@ formArreglos.addEventListener('submit', (evento) =>{
             resultado = talleres.map((t) => `- ${t.nombre} (${t.inscritos}/${t.cupo})`).join('\n');
             break;
         case 'map': 
-            resultado = talleres.map((t) => t.nombre).join(', ');
+            resultado = talleres.map((t) => t.nombre).join('- ');
             break;
         case 'filter': 
             resultado = talleres.filter((t) => t.inscritos >= t.cupo).map((t) =>  `- ${t.nombre} (${t.inscritos}/${t.cupo})`).join('\n');
             break;
         case 'find':
-            resultado = talleres.find((t) => t.instructor === 'Ing. María López');
+            const encontrado = talleres.find((t) => t.instructor === 'Ing. María López');
             resultado = encontrado ? `- ${encontrado.nombre} (${encontrado.inscritos}/${encontrado.cupo})` : 'No se encontró ningún taller impartido por Ing. María López';
             break;
         case 'reduce':
