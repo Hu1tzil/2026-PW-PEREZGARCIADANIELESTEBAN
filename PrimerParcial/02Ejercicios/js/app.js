@@ -48,7 +48,7 @@ formArreglos.addEventListener('submit', (evento) =>{
             break;
         case 'find':
             resultado = talleres.find((t) => t.instructor === 'Ing. María López');
-            resultado = encontrado ? `- ${resultado.nombre} (${resultado.inscritos}/${resultado.cupo})` : 'No se encontró ningún taller impartido por Ing. María López';
+            resultado = encontrado ? `- ${encontrado.nombre} (${encontrado.inscritos}/${encontrado.cupo})` : 'No se encontró ningún taller impartido por Ing. María López';
             break;
         case 'reduce':
             resultado = talleres.map((t) => t.inscritos).reduce((total, inscritos) => total + inscritos, 0);
