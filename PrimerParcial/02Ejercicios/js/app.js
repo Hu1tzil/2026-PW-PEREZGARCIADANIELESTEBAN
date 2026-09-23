@@ -44,16 +44,17 @@ formArreglos.addEventListener('submit', (evento) =>{
             resultado = talleres.map((t) => t.nombre).join(', ');
             break;
         case 'filter': 
-            resultado = talleres.map((t) => `- ${t.nombre} (${t.inscritos}/${t.cupo})`).filter((t) => t.includes('25')).join('\n');
+            resultado = talleres.filter((t) => t.inscritos >= t.cupo).map((t) =>  `- ${t.nombre} (${t.inscritos}/${t.cupo})`).join('\n');
             break;
         case 'find':
-            resultado = talleres.map((t) => `- ${t.nombre} (${t.inscritos}/${t.cupo})`).find((t) => t.includes('María López'));
+            resultado = talleres.find((t) => t.instructor === 'Ing. María López');
+            resultado = encontrado ? `- ${resultado.nombre} (${resultado.inscritos}/${resultado.cupo})` : 'No se encontró ningún taller impartido por Ing. María López';
             break;
         case 'reduce':
             resultado = talleres.map((t) => t.inscritos).reduce((total, inscritos) => total + inscritos, 0);
             break;
         case 'filterMap':
-            resultado = talleres.map((t) => `- ${t.nombre} (${t.inscritos}/${t.cupo})`).filter((t) => t.includes('Disponible')).join('\n');
+            resultado = talleres.filter((t) => t.inscritos < t.cupo).map((t) => `- ${t.nombre} (${t.inscritos}/${t.cupo})`).join('\n');
             break;
         default:
             resultado = 'Operación no válida';
