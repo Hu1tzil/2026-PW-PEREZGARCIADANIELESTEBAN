@@ -1,0 +1,110 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f9fafb;
+    font-family: 'Times New Roman', Times, serif;
+    color: #212E0A;
+    line-height: 1.6;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.titulocontent h1 {
+    color: #2F0A28;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.titulocontent p {
+    color: #0A2E0F;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+.tabla-scroll table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #E0F2E9;
+    border: 1px solid #AD7BA4;
+    border-radius: 0.5rem;
+}
+
+.tabla-scroll th {
+    background-color: #2F0A28;
+    color: #FFFFFF;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.tabla-scroll td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #AD7BA4;
+    text-align: center;
+}
+
+.formulario {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #AD7BA4;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2F0A28;
+}
+
+.formulario select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #AD7BA4;
+    border-radius: 0.25rem;
+    background-color: #f9fafb;
+}
+
+.formulario button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #2F0A28;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formulario button:hover {
+    background-color: #AD7BA4;
+}
+
+.resultado {
+    display: block;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #7BAD83;
+    border-radius: 0.5rem;
+    background-color: #E0F2E9;
+    color: #2F0A28;
+    font-style: italic;
+}
+
