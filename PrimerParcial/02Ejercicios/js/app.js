@@ -66,3 +66,51 @@ formArreglos.addEventListener('submit', (evento) =>{
 
     resultadoArreglos.textContent = resultado;
 });
+
+//Segunda parte
+
+const formObjetos = document.getElementById('form-objetos');
+const resultadoObjetos = document.getElementById('resultado-objeto');
+
+formObjetos.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+
+    //Construimos el objeto de talleres 
+    const taller = {
+        nombre: document.getElementById('obj-nombre').value,
+        instructor: document.getElementById('obj-instructor').value,
+        cupo: Number(document.getElementById('obj-cupo').value),
+        inscritos: Number(document.getElementById('obj-inscritos').value)
+    };
+
+    const operacion = document.getElementById('operacion-objeto').value;
+
+    let resultado;
+
+    switch(operacion){
+        case 'keys':
+            resultado = JSON.stringify(Object.keys(taller));
+            break;
+        case 'values':
+            break;
+        case 'entries':
+            resultado = Object.entries(taller).map
+            break;
+        case 'stringify':
+            break;
+        case 'roundtrip':
+            const textoJson = JSON.stringify(taller, null, 2);
+            const objetoDeVuelta = JSON.parse(textoJson);
+
+            resultado = [
+                '',
+                textoJson,
+                '',
+                `tipo: ${typeof objetoDeVuelta}`,
+                
+            ]
+            break;
+    }
+
+    resultadoObjetos.textContent = resultado;
+})
