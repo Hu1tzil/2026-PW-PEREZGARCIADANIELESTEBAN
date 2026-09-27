@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,8 +9,8 @@ body {
     font-family: 'Times New Roman', Times, serif;
     color: #212E0A;
     line-height: 1.6;
+    text-align: center; 
 }
-
 
 .container {
     max-width: 960px;
@@ -22,76 +21,93 @@ body {
 header h1 {
     text-align: center;
     color: #2F0A28;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid #AD7BA4;
+    padding-bottom: 0.5rem;
 }
 
+.ejercicio {
+    background-color: #ffffff;
+    border: 1px solid #AD7BA4;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-.titulo-arreglos {
+.ejercicio h2 {
     color: #2F0A28;
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
-    text-align: center;
 }
 
-.titulo-arreglos  p {
+.ejercicio p {
     color: #0A2E0F;
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
 }
+
 
 .tabla-scroll {
     overflow-x: auto;
+    margin-bottom: 1.5rem;
 }
 
-.tabla-talleres {
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
     background-color: #E0F2E9;
     border: 1px solid #AD7BA4;
     border-radius: 0.5rem;
+    overflow: hidden;
 }
 
-.tabla-talleres th {
+th {
     background-color: #2F0A28;
     color: #FFFFFF;
     padding: 0.75rem;
     text-align: center;
+    font-weight: bold;
 }
 
-.tabla-talleres td {
+td {
     padding: 0.75rem;
     border-bottom: 1px solid #AD7BA4;
     text-align: center;
+    color: #212E0A;
 }
 
-
-.form-arreglos {
-    margin-top: 2rem;
+.formulario {
+    margin-top: 1.5rem;
     padding: 1rem;
     border: 1px solid #AD7BA4;
     border-radius: 0.5rem;
-    background-color: #fff;
+    background-color: #ffffff;
+    text-align: left;
 }
 
-.form-arreglos label {
+.formulario label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
     color: #2F0A28;
 }
 
-.operacion-arreglo {
+.formulario input,
+.formulario select {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #AD7BA4;
     border-radius: 0.25rem;
     background-color: #f9fafb;
+    margin-bottom: 1rem;
 }
 
-.form-arreglos button {
-    margin-top: 1rem;
+.formulario button {
+    display: block;
+    margin: 1rem auto 0 auto;
     padding: 0.75rem 1.5rem;
     background-color: #2F0A28;
     color: #fff;
@@ -101,11 +117,12 @@ header h1 {
     font-weight: bold;
 }
 
-.form-arreglos button:hover {
+.formulario button:hover {
     background-color: #AD7BA4;
 }
 
-.resultado-arreglo {
+
+.resultado {
     display: block;
     margin-top: 1rem;
     padding: 1rem;
@@ -114,5 +131,14 @@ header h1 {
     background-color: #E0F2E9;
     color: #2F0A28;
     font-style: italic;
+    text-align: center;
 }
+
+video {
+    margin-top: 2rem;
+    border: 2px solid #AD7BA4;
+    border-radius: 0.5rem;
+    max-width: 100%;
+}
+
 
