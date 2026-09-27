@@ -1,66 +1,73 @@
-*{
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
     background-color: #f9fafb;
     font-family: 'Times New Roman', Times, serif;
     color: #212E0A;
     line-height: 1.6;
 }
 
-.conteiner{
+.container {
     max-width: 960px;
-    margin: 2 rem auto;
+    margin: 2rem auto; 
     padding: 1rem;
 }
 
-.titulocontent h1{
+
+.titulocontent h1 {
     color: #2F0A28;
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     text-align: center;
 }
 
-titulocontent p{
+.titulocontent p {
     color: #0A2E0F;
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.tables table{
+
+.tables table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
-    Background-color: #E0F2E9;
+    background-color: #E0F2E9;
     border: 1px solid #AD7BA4;
-    border-radius: 0.5 rem;
+    border-radius: 0.5rem; 
     overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
 }
 
-.tables th{
+.tables th {
     background-color: #2F0A28;
     color: #FFFFFF;
     padding: 0.75rem;
-    text-align: left;
     text-align: center;
-
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
-tables td{
+.tables td {
     padding: 0.75rem;
     border-bottom: 1px solid #AD7BA4;
     text-align: center;
+    color: #212E0A;
 }
 
-a{
+a {
     color: #7BAD83;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-a:hover{
+a:hover {
     color: #AD7BA4;
     text-decoration: underline;
 }
