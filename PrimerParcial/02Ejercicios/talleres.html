@@ -105,6 +105,28 @@
             </output>
 
         </section>
+        <section class="ejercicio" aria-labelledby="titulo-texto" >
+            <h2 id="titulo-texto"> Manejo de Strings y Fechas </h2>
+            <p>La fecha usa el mismo formato <strong>DD/MM/AAAA</strong> valido con regex</p>
+            <form id="form-texto" class="formulario" >
+                <div class="campo" >
+                    <label for="nombre-texto">Nombre (Con espacios de sobra a proposito)</label>
+                    <input type="text" name="nombre-texto" id="nombre-texto" value="  María López  ">
+                </div>
+                <div class="campo" >
+                    <label for="nombre-cupo">Cupo(para el template)</label>
+                    <input type="number" name="nombre-cupo" id="nombre-cupo" value="25" min="0">
+                </div>
+                <div class="campo" >
+                    <label for="fecha-texto">Fecha de asistencia (DD/MM/AAAA)</label>
+                    <input type="text" name="fecha-texto" id="fecha-texto" value="05/09/2026" placeholder="05/09/2026">
+                    <span class="error" id="error-fecha" ></span>
+                </div>
+                <button type="submit" >Ejecutar opción</button>
+            </form>
+            <output class="resultado" id="resultado-texto" for="form-texto" ></output>
+        </section>
+
         <video width="auto" controls>
             <source src="Grabación de pantalla 2026-09-24 184042.mp4">
         </video>
