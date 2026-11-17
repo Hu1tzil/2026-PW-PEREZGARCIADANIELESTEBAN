@@ -58,7 +58,7 @@ Necesitas **Node.js 18 o más nuevo**, **MySQL 8 encendido** (el mismo de siempr
    SELECT * FROM demo_sesiones.sessions;
    ```
 
-Abre `http://localhost:4600` y abre **F12**. Vas a usar dos pestañas de las herramientas:
+Abre `http://localhost:46z00` y abre **F12**. Vas a usar dos pestañas de las herramientas:
 
 - **Network** (Red): cada petición, con sus encabezados (*Headers*).
 - **Application** (Aplicación) → **Cookies** → `http://localhost:4600`: las cookies que guarda el navegador.
