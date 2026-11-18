@@ -27,7 +27,7 @@ function crearApp(config, pool) {
   ? new session.MemoryStore() 
   : new MySQLStore({createDatabase: false, clearExpired: false}, pool);
   app.locals.almacen = almacen;
-}
+
 
 app.use(
   session({
@@ -174,6 +174,7 @@ function requiereSesion(req, res, next){
 
   return app;
   
+}
 }
 
 module.exports = { crearApp, NOMBRE_COOKIE};
