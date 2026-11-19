@@ -25,7 +25,7 @@ function crearApp(config, pool){
     //aqui el servidor debe de recordar cada vez que existe una sesión, para eso vamos a ocupar el almacen
 
     const almacen = config.almacen === 'memoria' ? new session.MemoryStore() : new MySQLStore({createDatabaseTable: false, clearExpired: false}, pool);
-    app.locals.almace = almacen;
+    app.locals.almacen = almacen;
 
     app.use(
         session({
@@ -37,9 +37,9 @@ function crearApp(config, pool){
             rolling : config.rolling,
             cookie:{
                 maxAge: config.maxAge || 1000 * 60 * 60 * 24,
-                httpOnly: config.httpOnly || true,
+                httpOnly: config.httpOnly ?? true,
                 sameSite: config.sameSite || 'lax',
-                secure: config.secure || false
+                secure: config.secure ?? false
             }
         })
     );
@@ -71,7 +71,7 @@ function crearApp(config, pool){
     function requiereRol(rol){
         return (req, res, next)=>{
             if(req.session.usuario.rol !== rol){
-                return res.status(403).json({error: `Eres ${res.session.usuario.usuario}, pero esta ruta es para ${rol}`});
+                return res.status(403).json({error: `Eres ${req.session.usuario.usuario}, pero esta ruta es para ${rol}`});
             }
             next();
         };
@@ -139,7 +139,7 @@ function crearApp(config, pool){
         res.json({
             usuario : req.session.usuario,
             sesion : idCorto(req.sessionID),
-            expiraEnSegundos : Math.max(0, Math.round((desde + config.maxAge - Date.now())/10000)),
+            expiraEnSegundos : Math.max(0, Math.round((desde + config.maxAge - Date.now())/1000)),
         });
     });
 
@@ -157,7 +157,7 @@ function crearApp(config, pool){
                 sesion : idCorto(id),
                 esLaTuya : id === req.sessionID,
                 usuario: s.usuario ? s.usuario.usuario : 'Sin incir sesion',
-                visitas: s.visitass || 0,
+                visitas: s.visitas || 0,
                 expira : s.cookie && s.cookie.expires,
             }));
             res.json({almacen : config.almacen, sesiones : lista});
