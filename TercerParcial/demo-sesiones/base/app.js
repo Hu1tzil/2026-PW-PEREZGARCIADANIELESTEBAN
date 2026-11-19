@@ -32,14 +32,15 @@ function crearApp(config, pool){
             name : NOMBRE_COOKIE,
             //aqui tenemos que definir si es secreta, si es publica o como es su acceso
             secret: process.env.SESSION_SECRET || 'secreto-solo-para-demo',
+            store: almacen,
             resave: false,
             saveUninitialized: false,
             rolling : config.rolling,
             cookie:{
-                maxAge: config.maxAge || 1000 * 60 * 60 * 24,
-                httpOnly: config.httpOnly ?? true,
+                maxAge: config.maxAgeMs,
+                httpOnly: config.httpOnly,
                 sameSite: config.sameSite || 'lax',
-                secure: config.secure ?? false
+                secure: config.secure || false
             }
         })
     );
@@ -50,7 +51,7 @@ function crearApp(config, pool){
     //como estamos ocupando un middleware dentro de la app, necesitamos verificar el vencimiento de la sesión, express-session alarga por defecto el vencimiento guardadno en el servidor por cada petición aunque el rolling sea en false, si solo confiamos en esto alguien nos puede copiar la cookie y mantener vivia la sesión creando un defecto de seguridad
     function vencida(sesion){
         const desde = config.rolling ? sesion.ultimoUso : sesion.creada;
-        return Date.now() - desde > config.maxAge;
+        return Date.now() - desde > config.maxAgeMs;
     }
 
     //401 no estas autorizado
@@ -145,7 +146,11 @@ function crearApp(config, pool){
 
     app.get('/api/perfil', requiereSesion, (req, res)=>{
         req.session.visitas = (req.session.visitas || 0) + 1;
-        res.json({mensaje : `Hola ${req.session.usuario.nombre} rol: ${req.session.usuario.rol}, visitas : ${req.session.visitas}`});
+        res.json({mensaje : `Hola ${req.session.usuario.nombre}`, rol: req.session.usuario.rol, visitas : req.session.visitas});
+    });
+
+     app.get('/api/admin/reporte', requiereSesion, requiereRol('admin'), (req, res)=>{
+        res.json({reporte: 'Talleres: 3 · Inscritos: 57 · Cupo libre: 18'});
     });
 
     //vamos a desarrollar una prueba uitadria para verificar con v o fl las pruebas ejecutadas
