@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "probar": "node pruebas/probar.js"
+    "probar": "node pruebas/probar.js",
+    "bd" : "node crear bd/crear-bd.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
